@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    
+ <head>
+<!-- head contains all the linked code and scale -->
+<!-- for scalability -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- the styles css overrides the alignment simple grid css, so styles are shown -->
+     <link href="usability_styles.css" type='text/css' rel='stylesheet'>
+     <link href="simple-grid.css" type='text/css' rel='stylesheet'>
+<!-- linked javascript -->
+     <script src="usability_quiz.js"></script>
+      <meta lang="en">
+        <meta charset="utf-8">
+     <title>Usability Heuristics Quiz</title> 
+</head>  
+
+<body>
+<!-- I wanted to center everything in the game, so I added a center class -->
+   <div class="row center">
+<!-- This title is always going to be on the top of the game -->
+       <p> What usability heuristic is being displayed here?</p>
+<!-- This is the id corresponds to the question heuristics array and here is where the image would be displayed when the questions are asked -->   
+       <img id="heuristicImg" src="">
+       <p>
+<!-- start game button -->
+            <button id="start" onclick="startGame();">Start Game</button>
+       </p>
+<!-- instructions button -->   
+            <button  id="instructions" onclick="showInstructionsText();">Instructions</button>
+    <div id="instructionsText" class="hidden">
+<!-- This is the text that is shown to the user when they press the instruction button -->
+         <p> The image corresponds to a particular usability heuristic. </p>
+         <p> There are four possible answer options to choose from.</p>
+         <p> Choose the right one and get a point. </p>
+           </div>
+    </div>
+    
+    <div class="hidden" id="gameBox">
+    <div class="row">
+        <div class="col-6">
+<!-- the top left button --> 
+        <input type="button" id="choice1" value= "answer1" onclick="checkAnswer(this.value); ">
+        </div>
+        
+<!-- the top right button --> 
+        <div class="col-6">
+           <input type="button" id="choice2" value= "answer2" onclick="checkAnswer(this.value);"> 
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+<!-- the bottom left button --> 
+            <input type="button" id="choice3" value= "answer3" onclick="checkAnswer(this.value);">
+        </div>
+
+        <div class="col-6">
+<!-- the bottom right button --> 
+           <input type="button" id="choice4" value= "answer4" onclick="checkAnswer(this.value);"> 
+        </div>
+
+    </div>
+      
+<!-- displays the current score after each answer is given -->
+          <h3 id="currentScore"></h3>
+
+<!-- displays the output message after each answer is given -->
+        <h2 id="output"></h2>
+ 
+<!-- play again button, which refreshes everything to let the player start from the start again -->
+    <div id="quiz" class="center"></div>
+<button class="hidden" id="play" onclick="startGame();">Play Again</button>
+
+<!-- at the end of the game, the results are displayed -->
+<div id="results"></div>
+        </div>
+    
+</body>
+    
+</html>

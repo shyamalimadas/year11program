@@ -1,0 +1,72 @@
+/* This is the imported font with is Handlee and Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Handlee|Lato|Montserrat&display=swap');
+
+/* The code for the body and the html */
+body, html {
+    width:100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: white; /* Old browsers */
+}
+
+/* The code to center the text in the paragraph. This is less about function and more about my personal style. I like centered text, although it isn't very conventional */ 
+p {
+   text-align: center; 
+   font-size: 48px;
+}
+
+/* This code is to center the image, although it is not working */
+#heuristicImg {
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+/* This code is to center the image, although it is not working */
+#questionsHeuristics{
+   align-items: center;
+}
+
+#gameBox {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2%;
+    height: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* the styles for the text for the button option answers */
+input {
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* the hidden and the show styles are for the buttons; startGame and instruction buttons */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* this is the sizes for the texts, the output and the current score */
+#output {
+    font-size: 20px; 
+}
+
+#currentScore {
+    font-size: 24px;
+}
+
+/* these are the styles for the buttons so that when I scale the website, they will be centered */
+button {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
